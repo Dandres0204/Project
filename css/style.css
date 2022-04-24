@@ -39,6 +39,9 @@ h2 {
     background-color: rgb(0, 0, 0);
     color: white;
 }
+.button:hover{
+    transform: scale(1.1);
+}
 ul li {
     font-size : 15px;
 }
@@ -57,7 +60,20 @@ ul li {
     top:0;
     z-index: 100;
     grid-area: nav;
-}    
+    animation-name: ingreso;
+    animation-duration: 2s;
+} 
+.menu a:hover{
+    transform: scale(1.1);
+    
+} 
+.menu li:hover{
+    transform: scale(1.1);
+} 
+section nav ul li a{
+    animation-name: ingreso_contenido;
+    animation-duration: 2s;
+}
 ul {
     list-style: none;
 }
@@ -65,6 +81,8 @@ section nav ul li {
     display:inline-block;
     font-size: 20px;
     padding: 5px;
+    animation-name: ingreso_contenido;
+    animation-duration: 2s;
 
 }
 .nombre_barra{
@@ -77,6 +95,8 @@ section nav ul li {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 150px;
+    animation-name: ingreso_contenido;
+    animation-duration: 2s;
 }
 section img{
     background-color: white;
@@ -86,6 +106,8 @@ section img{
     margin:15px;
     background-position: center;
     background-repeat: no-repeat;
+    animation-name: ingreso_contenido;
+    animation-duration: 2s;
 }
 .encabezado form img{
     width: 15px;
@@ -266,4 +288,45 @@ select{
         height: 340px;
     }
 
+}
+@keyframes ingreso {
+    0%{
+        height: 3000px;
+        align-items: center;
+        justify-content: center;
+
+    }
+    25%{
+        height: 10px;
+        width: 100px;
+        transform: translate(600px,200px);
+        }
+    50%{
+        height: 10px;
+    }
+    100%{
+        width: 100%;
+    }
+
+}
+@keyframes ingreso_contenido{
+    0%{
+        height: 1px;
+        width: 1px;
+        color: black;
+        font-size: 0.5px;
+    }
+    50%{
+        height: 10px;
+        width: 10px;
+        color: black;
+        font-size: 0.5px;
+    }
+    75%{
+        font-size: 0.5px;
+        color: black;
+    }
+    100%{  
+        color:rgb(87, 84, 84);
+    }
 }
