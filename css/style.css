@@ -73,7 +73,7 @@ section nav ul li {
     margin: 15px;
     background-size: contain;
     height: 55px;
-    background-image: url("../img/generatedtext.png");
+    background-image: url("../assets/img/generatedtext.png");
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 150px;
